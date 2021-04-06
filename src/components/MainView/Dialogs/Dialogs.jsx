@@ -44,7 +44,6 @@ const Dialogs = React.memo(({sendMessage, dialogsPage, isAuth,}) => {
                 {MessagesDataElementsLeft}
                 {MessagesDataElementsRight}
             </s.DialogsElements>
-            {'fakeg'}
             <s.MessageInputReduxForm><MessageInputReduxForm onSubmit={addNewMessage}/></s.MessageInputReduxForm>
         </s.Dialogs>
     )
