@@ -30,7 +30,8 @@ const Users = React.memo(({
     }
     return (
 
-        <s.Users>
+        <s.UsersPage>
+            <s.Navbar>
             <button onClick={() => {
                 onPageChangedALL(currentPage, pageSize)
             }}>
@@ -48,12 +49,15 @@ const Users = React.memo(({
                        getUsersThunkCreator={getUsersThunkCreator}
                        isFriendsList={isFriendsList}
             />
+            </s.Navbar>
+            <s.UsersList>
             {
                 usersData.map(u => <User user={u} key={u.id} followingInProgress={followingInProgress}
                                          followThunk={followThunk} unFollowThunk={unFollowThunk}/>
                 )
             }
-        </s.Users>
+            </s.UsersList>
+        </s.UsersPage>
     )
 })
 

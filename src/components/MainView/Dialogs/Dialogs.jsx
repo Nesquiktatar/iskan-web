@@ -14,7 +14,6 @@ const maxLength50 = maxLengthCreator(50);
 const MessageInputForm = (props) => {
 
     return (
-        <s.messageInputForm>
             <form onSubmit={props.handleSubmit}>
                 {buildField('Your message', 'MsgBody', [required, maxLength50], Input)}
                 <div>
@@ -22,7 +21,6 @@ const MessageInputForm = (props) => {
                 </div>
 
             </form>
-        </s.messageInputForm>
     )
 }
 
@@ -42,7 +40,9 @@ const Dialogs = React.memo(({sendMessage, dialogsPage, isAuth,}) => {
             <DialogsNavbar data={dialogsPage.dialogsNavElData}/>
             <s.DialogsElements>
                 {MessagesDataElementsLeft}
+                <s.RightDialogs>
                 {MessagesDataElementsRight}
+                </s.RightDialogs>
             </s.DialogsElements>
             <s.MessageInputReduxForm><MessageInputReduxForm onSubmit={addNewMessage}/></s.MessageInputReduxForm>
         </s.Dialogs>

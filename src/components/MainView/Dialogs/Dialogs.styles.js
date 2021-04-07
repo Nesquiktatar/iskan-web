@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const Dialogs = styled.div`
    border: 3px solid red;
-      padding: 2% 0 0 2%;
+      padding: 2% 0 0 10%;
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-areas: 
@@ -11,6 +11,7 @@ export const Dialogs = styled.div`
 `;
 
 export const DialogsNavEl = styled.div`
+     border-radius: 34px;
     a{
     text-decoration: none;
     }
@@ -26,7 +27,6 @@ export const DialogsNavEl = styled.div`
    `;
 
 export const DialogsNavbar = styled.div`
-    background-color: brown;
     grid-area: DialogsNavbar;
     display: grid;
     img{
@@ -41,13 +41,17 @@ export const DialogsElements = styled.div`
     padding: 0 4%;
 `;
 
-export const messageInputForm = styled.div`
-    grid-area: messageInputForm;
-    display:block;
-   margin-left: auto;
-    margin-right: auto;
-`;
 
 export const MessageInputReduxForm = styled.div`
+   padding:2% 0 0 20%;
    grid-area: MessageInputReduxForm;
+   button{
+   
+   left: 20%;
+   }
+
+`;
+
+export const RightDialogs = styled.div `
+   padding-right: 30%;
 `;
