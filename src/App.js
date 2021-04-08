@@ -68,12 +68,12 @@ const App = (props) => {
 
 
         <ThemeProvider theme={props.appPage.themes[theme]}>
-            <s.App>
+            <s.App appPage={props.appPage}>
                 <SidebarContainer
                     theme={theme}
                     setTheme={setTheme}
                 />
-                <MainView/>
+                <MainView />
             </s.App>
         </ThemeProvider>
 

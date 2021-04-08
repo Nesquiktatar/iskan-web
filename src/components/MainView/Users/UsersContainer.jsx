@@ -61,6 +61,7 @@ class UsersContainer extends React.Component {
                    getFriendsThunkCreator={this.props.getFriendsThunkCreator}
                    getUsersThunkCreator={this.props.getUsersThunkCreator}
                    getSearchUserThunk={this.props.getSearchUserThunk}
+                   appPage={this.props.appPage}
             />
         </>
     }
@@ -69,6 +70,7 @@ class UsersContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
+        appPage: state.appPage,
         usersData: getUsersData(state),
         pageSize: getPageSize(state),
         totalUsersCount: getTotalUsersCount(state),

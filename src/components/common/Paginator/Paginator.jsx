@@ -22,7 +22,6 @@ const Paginator = ({totalItemsCount, pageSize, onPageChanged, currentPage, porti
         <div className={moduleStyle.paginator} >
             {portionNumber > 1 &&
             <button onClick={() => {setPortionNumber(portionNumber-1)}}>PREV</button>}
-
             {pages
                 .filter(p => p>=leftPortionPageNumber && p <= rightPortionPageNumber)
                 .map(p => {

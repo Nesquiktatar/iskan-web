@@ -5,10 +5,11 @@ import User from './User';
 import {buildField, Input} from '../../common/FormsControls/FormsControls';
 import {required} from '../../../utils/validators/validators';
 import {reduxForm} from 'redux-form';
+import Button from "../../common/Button/Button";
 
 const Users = React.memo(({
                               currentPage, onPageChanged, totalUsersCount, pageSize, usersData, followingInProgress,
-                              unFollowThunk, followThunk, getFriendsThunkCreator, getUsersThunkCreator, getSearchUserThunk, ...props
+                              unFollowThunk, followThunk, getFriendsThunkCreator, getUsersThunkCreator, getSearchUserThunk, appPage, ...props
                           }) => {
 
     const onSubmit = (formData) => {
@@ -30,43 +31,47 @@ const Users = React.memo(({
     }
     return (
 
-        <s.UsersPage>
+        <s.UsersWrapper appPage={appPage}>
             <s.Navbar>
-            <button onClick={() => {
-                onPageChangedALL(currentPage, pageSize)
-            }}>
-                ALL
-            </button>
-            <button onClick={() => {
-                onPageChangedFriends(currentPage, pageSize)
-            }}>
-                FOLLOWED
-            </button>
-            <UserSearchFrom onSubmit={onSubmit}/>
-            <Paginator currentPage={currentPage} onPageChanged={onPageChanged}
-                       totalItemsCount={totalUsersCount} pageSize={pageSize}
-                       getFriendsThunkCreator={getFriendsThunkCreator}
-                       getUsersThunkCreator={getUsersThunkCreator}
-                       isFriendsList={isFriendsList}
-            />
+                <s.Filter>
+                    <Button onClick={() => {
+                        onPageChangedALL(currentPage, pageSize)
+                    }} btnText='ALL'/>
+                    <Button onClick={() => {
+                        onPageChangedFriends(currentPage, pageSize)
+                    }} btnText='FOLLOWED'/>
+                </s.Filter>
+                <s.Paginator>
+                    <Paginator currentPage={currentPage} onPageChanged={onPageChanged}
+                               totalItemsCount={totalUsersCount} pageSize={pageSize}
+                               getFriendsThunkCreator={getFriendsThunkCreator}
+                               getUsersThunkCreator={getUsersThunkCreator}
+                               isFriendsList={isFriendsList}
+                    />
+                </s.Paginator>
+                    <UserSearchFrom onSubmit={onSubmit}/>
             </s.Navbar>
             <s.UsersList>
-            {
-                usersData.map(u => <User user={u} key={u.id} followingInProgress={followingInProgress}
-                                         followThunk={followThunk} unFollowThunk={unFollowThunk}/>
-                )
-            }
+                {
+                    usersData.map(u => <User user={u} key={u.id} followingInProgress={followingInProgress}
+                                             followThunk={followThunk} unFollowThunk={unFollowThunk}/>
+                    )
+                }
             </s.UsersList>
-        </s.UsersPage>
+        </s.UsersWrapper>
     )
 })
 
 const SearchForm = ({handleSubmit}) => {
     return (
-        <form onSubmit={handleSubmit}>
-            {buildField('Enter user name', 'term', [required], Input)}
-            <button>search</button>
-        </form>
+
+            <form onSubmit={handleSubmit}>
+                <s.Search>
+                {buildField('Enter user name', 'term', [required], Input)}
+                <Button btnText='search'/>
+                </s.Search>
+            </form>
+
     )
 }
 
