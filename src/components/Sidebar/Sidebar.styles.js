@@ -146,5 +146,14 @@ export const DarkLight = styled.div`
 `;
 
 export const LoginBlock = styled.div`
-    background-color : yellow;
+    color: ${p => p.themes.dark.green};
+    margin: 4% 0 14% 34%;
+    button{
+    margin-left: 40%;
+    font-size: larger;
+    }
+    a{
+    color: ${p => p.themes.dark.green};
+    text-decoration: none;
+    }
 `;

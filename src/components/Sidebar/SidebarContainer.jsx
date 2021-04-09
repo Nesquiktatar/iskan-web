@@ -15,7 +15,9 @@ class SidebarContainer extends React.Component {
 const mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth,
     login: state.auth.login,
-    sidebarPage: state.sidebarPage
+    sidebarPage: state.sidebarPage,
+    profile: state.profilePage.profile,
+    themes: state.appPage.themes
 })
 
 export default connect (mapStateToProps, {logout}) (SidebarContainer);

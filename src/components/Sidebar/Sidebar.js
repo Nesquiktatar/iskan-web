@@ -180,8 +180,13 @@ const Sidebar = (props) => {
             isSidebarOpen={isSidebarOpen}
 
         >
-
             <s.SidebarHeader font={props.sidebarPage.fonts.header}>{header}</s.SidebarHeader>
+            <s.LoginBlock themes={props.themes}>
+                {props.isAuth
+                    ? <div> {props.login} <div> <button onClick={props.logout}>Log out</button></div></div>
+                    : <NavLink to={'/login'}>Login</NavLink>
+                }
+            </s.LoginBlock>
 
             <s.MenuItemContainer>{menuItemsJSX}</s.MenuItemContainer>
             <s.DarkLight>
@@ -189,12 +194,6 @@ const Sidebar = (props) => {
                           setTheme={props.setTheme}/>
             </s.DarkLight>
 
-            {/*Добавить чтоб вместо login отоброжалось фотка*/}
-            {props.isAuth
-                ? <div> {props.login} - <button onClick={props.logout}>Log out</button></div>
-                : <s.LoginBlock>
-                    <NavLink to={'/login'}>Login</NavLink>
-                </s.LoginBlock>}
 
             <s.TogglerContainer onClick={() => setSidebarState(!isSidebarOpen)}>
                 <s.Toggler/>

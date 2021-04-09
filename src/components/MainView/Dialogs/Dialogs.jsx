@@ -14,13 +14,14 @@ const maxLength50 = maxLengthCreator(50);
 const MessageInputForm = (props) => {
 
     return (
-            <form onSubmit={props.handleSubmit}>
-                {buildField('Your message', 'MsgBody', [required, maxLength50], Input)}
-                <div>
-                    <Button btnText='SEND'/>
-                </div>
 
-            </form>
+        <form onSubmit={props.handleSubmit}>
+            <s.MessageInputReduxForm>
+                {buildField('Your message', 'MsgBody', [required, maxLength50], Input)}
+                <Button btnText='SEND'/>
+            </s.MessageInputReduxForm>
+        </form>
+
     )
 }
 
@@ -29,7 +30,8 @@ const MessageInputReduxForm = reduxForm({form: 'dialogsAddMsgForm'})(MessageInpu
 const Dialogs = React.memo(({sendMessage, dialogsPage, isAuth, themes}) => {
 
     let MessagesDataElementsLeft = dialogsPage.messagesDataIncoming.map(m => <LeftBox message={m.message} key={m.id}/>)
-    let MessagesDataElementsRight = dialogsPage.messagesDataOutgoing.map(m => <RightBox message={m.message} key={m.id}/>)
+    let MessagesDataElementsRight = dialogsPage.messagesDataOutgoing.map(m => <RightBox message={m.message}
+                                                                                        key={m.id}/>)
     let addNewMessage = (values) => {
         sendMessage(values.MsgBody);
     }
@@ -41,7 +43,7 @@ const Dialogs = React.memo(({sendMessage, dialogsPage, isAuth, themes}) => {
             <s.DialogsElements>
                 {MessagesDataElementsLeft}
                 <s.RightDialogs>
-                {MessagesDataElementsRight}
+                    {MessagesDataElementsRight}
                 </s.RightDialogs>
             </s.DialogsElements>
             <s.MessageInputReduxForm><MessageInputReduxForm onSubmit={addNewMessage}/></s.MessageInputReduxForm>

@@ -28,7 +28,6 @@ let initialState = {
     },
     menuItems: [
         {name: 'Profile', to: '/profile', icon: 'icons/home.svg', subMenuItems: []},
-        {name: 'My friends', to: '/friends', icon: 'icons/home.svg', subMenuItems: []},
         {name: 'Dialogs', to: '/dialogs', icon: 'icons/about.svg', subMenuItems: []},
         {
             name: 'Helper', to: '/helper', icon: 'icons/destinations.svg',

@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 
 export const Dialogs = styled.div`
-   border: 3px solid red;
       padding: 2% 0 0 10%;
     display: grid;
     grid-template-columns: 20% 80%;
@@ -48,6 +47,7 @@ export const DialogsElements = styled.div`
 
 
 export const MessageInputReduxForm = styled.div`
+   display: flex;
    padding:2% 0 0 20%;
    grid-area: MessageInputReduxForm;
    button{

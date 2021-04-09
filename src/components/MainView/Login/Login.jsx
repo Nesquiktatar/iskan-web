@@ -3,28 +3,28 @@ import * as s from './Login.styles';
 import {reduxForm} from 'redux-form';
 import {buildField, Input} from '../../common/FormsControls/FormsControls';
 import {required} from '../../../utils/validators/validators';
-import {connect} from 'react-redux';
-import {login} from '../../../dataredux/auth-reducer';
 import {Redirect} from 'react-router';
+import Button from "../../common/Button/Button";
 
-const LoginForm = ({handleSubmit, error, captchaUrl}) => {
+const LoginForm = ({handleSubmit, error, captchaUrl, themes}) => {
     return (
-        <s.Login>
-            <form onSubmit={handleSubmit}>
-                {buildField('Email', 'email', [required], Input)}
-                {buildField('Password', 'password', [required], Input, {type: 'password'})}
-                {buildField(null, 'rememberMe', [], Input, {type: 'checkbox'}, 'remember me')}
+
+        <form onSubmit={handleSubmit}>
+            <s.Login themes={themes}>
+                <span>LOGIN</span>
+                <s.Email>Email: {buildField('Email', 'email', [required], Input)}</s.Email>
+                <s.Password>Password: {buildField('Password', 'password', [required], Input, {type: 'password'})}</s.Password>
+                <s.RememberMe>{buildField(null, 'rememberMe', [], Input, {type: 'checkbox'}, 'remember me')}</s.RememberMe>
 
                 {captchaUrl && <img src={captchaUrl} alt="captcha"/>}
                 {captchaUrl && buildField('Enter symbols from image', 'captcha', [required], Input)}
                 {error && <s.FormSummaryError>
                     {error}
                 </s.FormSummaryError>}
-                <div>
-                    <button>Login</button>
-                </div>
-            </form>
-        </s.Login>
+                <Button btnText='Login'/>
+            </s.Login>
+        </form>
+
     )
 }
 
@@ -41,17 +41,10 @@ const Login = (props) => {
 
     return (
         <>
-            <div>Login</div>
-            <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl}/>
+
+            <LoginReduxForm themes={props.themes} onSubmit={onSubmit} captchaUrl={props.captchaUrl}/>
         </>
     )
 }
 
-const mapStateToProps = (state) => ({
-    isAuth: state.auth.isAuth,
-    captchaUrl: state.auth.captchaUrl
-})
-
-export default connect(mapStateToProps, {
-    login
-})(Login);
+export default Login;
