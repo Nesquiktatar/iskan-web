@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Profile = styled.div`
-    background-color: rgba(44, 31, 23, 0.8);
+    background-color: ${p => p.themes.dark};
     display: grid;
     grid-template-columns:10% 80% 10%;
     
@@ -19,11 +19,12 @@ export const ProfileInfo = styled.div`
 
 /*настройка внутри тега*/
 export const ProfileStatus = styled.div`
-height: 10% !important;
-  width: 20% !important;
+   color: ${p => p.themes.dark.turquoise};
+   font-size: x-large;
   
-    background-color: red;
-    grid-area: status;
-    border: 3px solid black;
+`;
+
+export const Description = styled.div`
+    color: ${p => p.themes.dark.green};
 `;
 

@@ -3,7 +3,7 @@ import * as s from './UserPosts.styles';
 
 const Post = (props) => {
     return (
-        <s.Post>
+        <s.Post themes={props.themes}>
             <div>
             {props.message}
             <p><span>Likes : 5♥</span></p>

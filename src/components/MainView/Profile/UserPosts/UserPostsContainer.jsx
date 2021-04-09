@@ -6,7 +6,8 @@ import {connect} from 'react-redux';
 
 const mapStateToProps = (state) => {
     return {
-        profilePage: state.profilePage
+        profilePage: state.profilePage,
+        themes: state.appPage.themes
     }
 }
 

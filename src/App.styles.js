@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const App = styled.div`
-    background  : ${props => props.appPage.themes.dark.black};
+    background  : ${p => p.appPage.themes.dark.black};
     height: 100vh;
     display: flex;
 `

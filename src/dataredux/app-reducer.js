@@ -15,10 +15,10 @@ let initialState = {
             selectedBackgroundCollapsedMode: `dark`
         },
         dark: {
-            black: '27323A',
-            grey: '435055',
-            turquoise: '29A19C',
-            green: 'A3F7BF',
+            black: '#27323A',
+            grey: '#435055',
+            turquoise: '#29A19C',
+            green: '#A3F7BF',
             bgColor1: 'rgba(67, 67, 67, 0.8)',
             bgColor2: 'rgba(0, 0, 0, 0.8)',
             fontColor: `rgba(161, 161, 161)`,

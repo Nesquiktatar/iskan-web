@@ -26,7 +26,7 @@ const MessageInputForm = (props) => {
 
 const MessageInputReduxForm = reduxForm({form: 'dialogsAddMsgForm'})(MessageInputForm)
 
-const Dialogs = React.memo(({sendMessage, dialogsPage, isAuth,}) => {
+const Dialogs = React.memo(({sendMessage, dialogsPage, isAuth, themes}) => {
 
     let MessagesDataElementsLeft = dialogsPage.messagesDataIncoming.map(m => <LeftBox message={m.message} key={m.id}/>)
     let MessagesDataElementsRight = dialogsPage.messagesDataOutgoing.map(m => <RightBox message={m.message} key={m.id}/>)
@@ -37,7 +37,7 @@ const Dialogs = React.memo(({sendMessage, dialogsPage, isAuth,}) => {
 
     return (
         <s.Dialogs>
-            <DialogsNavbar data={dialogsPage.dialogsNavElData}/>
+            <DialogsNavbar themes={themes} data={dialogsPage.dialogsNavElData}/>
             <s.DialogsElements>
                 {MessagesDataElementsLeft}
                 <s.RightDialogs>

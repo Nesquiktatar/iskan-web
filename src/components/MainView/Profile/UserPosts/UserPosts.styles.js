@@ -14,8 +14,10 @@ export const UserPosts = styled.div`
    `;
 
 export const Post = styled.div`
+   background-color: ${p => p.themes.dark.grey};
    text-align: center;
    border-radius: 10%;
+   margin: 1%;
    padding: 2%;
    border: 5px dashed;
    

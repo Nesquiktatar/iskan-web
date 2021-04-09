@@ -1,12 +1,12 @@
 import React from 'react';
-import * as s from './Profile.styles'
+import * as s from './Profile.styles';
 import UserPostsContainer from './UserPosts/UserPostsContainer';
 import ProfileInfo from './ProfileInfo';
 
-const Profile = React.memo(({profile, status, updateStatusThunk, isOwner, savePhoto, saveProfile}) => {
+const Profile = React.memo(({profile, status, updateStatusThunk, isOwner, savePhoto, saveProfile, themes}) => {
 
     return (
-        <s.Profile>
+        <s.Profile themes={themes}>
             <s.ProfileInfo>
                 <ProfileInfo isOwner={isOwner}
                              profile={profile}
@@ -14,9 +14,10 @@ const Profile = React.memo(({profile, status, updateStatusThunk, isOwner, savePh
                              updateStatus={updateStatusThunk}
                              savePhoto={savePhoto}
                              saveProfile={saveProfile}
+                             themes={themes}
                 />
             </s.ProfileInfo>
-            <s.MyPosts>
+            <s.MyPosts >
                 <UserPostsContainer/>
             </s.MyPosts>
 

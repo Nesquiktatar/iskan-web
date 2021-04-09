@@ -29,13 +29,14 @@ const Paginator = ({totalItemsCount, pageSize, onPageChanged, currentPage, porti
                     [moduleStyle.selectedPage] : currentPage === p
                 },moduleStyle.pageNumber)}
                              key={p}
-                             onClick={(e) => { isFriendsList ? getUsersThunkCreator(p, pageSize) : getFriendsThunkCreator(p, pageSize)
+                             onClick={(e) =>
+                             { isFriendsList
+                                 ? getUsersThunkCreator(p, pageSize)
+                                 : getFriendsThunkCreator(p, pageSize)
                              }}>{p}</span>
             })}
             {portionCount > portionNumber &&
-            <button onClick={() => {setPortionNumber(portionNumber + 1)}}>
-                NEXT
-            </button>}
+            <button onClick={() => {setPortionNumber(portionNumber + 1)}}>NEXT</button>}
         </div>
     )
 }

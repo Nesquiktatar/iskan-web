@@ -1,16 +1,22 @@
 .selectedPage{
     font-weight: bold;
-    color: red
+    color: #A3F7BF;
+    font-size: x-large;
 }
 .paginator {
-
-    margin: 10px;
+    font-family:'Verdana';
 }
 
+
 .pageNumber {
-    background-color: green;
+    margin: 1%;
+    border-radius: 40%;
     padding: 2px;
-    border: 1px solid grey;
+    border: 1px solid #27323A;
+}
+
+.pageNumber:hover {
+    color:#A3F7BF;
 }
 
 .pageNumber.selectedPage{

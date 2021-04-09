@@ -3,13 +3,13 @@ import * as s from '../Dialogs.styles'
 import userPhoto from '../../../../assets/images/user.svg';
 import {NavLink} from "react-router-dom";
 
-const DialogsNavEl = (props) => {
+const DialogsNavEl = ({selected, id, changeDialog, name, themes}) => {
     return (
-        <s.DialogsNavEl selected={props.selected} id={props.id} onClick={() => {props.changeDialog(props.id)}}>
-            <NavLink to={'/dialogs/' + props.id}>
+        <s.DialogsNavEl themes={themes} selected={selected} id={id} onClick={() => {changeDialog(id)}}>
+            <NavLink to={'/dialogs/' + id}>
                 <div>
                     <img src={userPhoto} alt="userPhoto"/>
-                    {props.name}
+                    {name}
                 </div>
             </NavLink>
         </s.DialogsNavEl>

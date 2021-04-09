@@ -25,7 +25,7 @@ const AddPostReduxForm = reduxForm({form: 'ProfileAddPostForm'})(AddPostForm)
 
 const UserPosts = (props) => {
 
-    let UserPostsDataElements = props.profilePage.userPostsData.map(p => <Post message={p.postText} key={p.id}/>)
+    let UserPostsDataElements = props.profilePage.userPostsData.map(p => <Post themes={props.themes} message={p.postText} key={p.id}/>)
 
     let onAddPost = (values) => {
         props.addPost(values.addPostForm);

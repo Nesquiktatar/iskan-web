@@ -53,6 +53,7 @@ class ProfileContainer extends React.Component {
                      updateStatus={this.props.updateStatusThunk}
                      savePhoto={this.props.savePhoto}
                      saveProfile={this.props.saveProfile}
+                     themes={this.props.themes}
             />
         )
     }
@@ -63,7 +64,8 @@ let mapStateToProps = (state) => {
         profile: state.profilePage.profile,
         status: state.profilePage.status,
         authorizedUserId: state.auth.userId,
-        isAuth: state.auth.isAuth
+        isAuth: state.auth.isAuth,
+        themes: state.appPage.themes
     }
 }
 

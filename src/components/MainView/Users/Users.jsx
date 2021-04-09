@@ -20,19 +20,19 @@ const Users = React.memo(({
     const [isFriendsList, setIsFriendsList] = useState(false);
 
     const onPageChangedALL = (currentPage, pageSize) => {
-
         getUsersThunkCreator(currentPage, pageSize);
         setIsFriendsList(true)
     }
 
     const onPageChangedFriends = (currentPage, pageSize) => {
+        currentPage=1;
         getFriendsThunkCreator(currentPage, pageSize);
         setIsFriendsList(false)
     }
     return (
 
         <s.UsersWrapper appPage={appPage}>
-            <s.Navbar>
+            <s.Navbar appPage={appPage}>
                 <s.Filter>
                     <Button onClick={() => {
                         onPageChangedALL(currentPage, pageSize)
