@@ -29,12 +29,12 @@ let initialState = {
     menuItems: [
         {name: 'Profile', to: '/profile', icon: 'icons/home.svg', subMenuItems: []},
         {name: 'Dialogs', to: '/dialogs', icon: 'icons/about.svg', subMenuItems: []},
-        {
+        /*{
             name: 'Helper', to: '/helper', icon: 'icons/destinations.svg',
             subMenuItems: [
                 {name: 'Todolist', to: '/todolist'},
             ]
-        },
+        },*/
         {name: 'Users', to: '/users', icon: 'icons/blog.svg', subMenuItems: []},
         {name: 'FAQ', to: '/faq', icon: 'icons/services.svg', subMenuItems: []},
     ],

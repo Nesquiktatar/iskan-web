@@ -15,19 +15,19 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
                         {profile.fullName}
                     </div>
                     <div className={s.lookingForJob}>
-                        <b>Looking for a job</b>: {profile.lookingForAJob ? 'yes' : 'no'}
+                        <b>Looking for a job</b>: <span> {profile.lookingForAJob ? 'yes' : 'no'} </span>
                     </div>
                     <div className={s.skills}>
                             <b>My professional skills</b>:
-                        <div>
+                        <span>
                         {profile.lookingForAJobDescription}
-                        </div>
+                        </span>
                     </div>
                     <div className={s.aboutMe}>
                         <b>About me</b>:
-                        <div>
+                        <span>
                             {profile.aboutMe}
-                        </div>
+                        </span>
                     </div>
                     <div className={s.contacts}>
                         {Object.keys(profile.contacts).map(key => {

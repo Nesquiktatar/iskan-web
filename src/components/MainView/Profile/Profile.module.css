@@ -5,7 +5,14 @@
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
             'photo description'
-            'status description'
+            'status description';
+}
+
+@media(max-width: 600px){
+    .container{
+        display:flex;
+        flex-direction: column;
+    }
 }
 
 .photo img{
@@ -34,6 +41,10 @@
 
 .description{
     grid-area: description;
+}
+
+.description span{
+    color: red;
 }
 
 .wrapper{

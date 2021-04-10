@@ -139,9 +139,9 @@ export const SubMenuItem = styled.p`
 
 export const DarkLight = styled.div`
     width: 30%;
-    bottom: 10%;
+    bottom: 20%;
     left: 30%;
-    margin: 0 auto;
+    margin: 10% auto;
     
 `;
 
