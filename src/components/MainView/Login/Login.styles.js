@@ -14,7 +14,6 @@ export const Login = styled.div`
     }
     margin: 0 auto;
     margin:16% 0 0 32%;
-    border: 2px solid red;
 `;
 
 export const FormSummaryError = styled.div`

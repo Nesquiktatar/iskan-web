@@ -8,12 +8,23 @@
             'status description';
 }
 
-@media(max-width: 600px){
+@media(max-width: 900px){
     .container{
         display:flex;
         flex-direction: column;
     }
+    .photo img{
+        margin-left: 24%;
+    }
 }
+
+@media(max-width: 800px){
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 
 .photo img{
     grid-area: photo;
@@ -44,7 +55,7 @@
 }
 
 .description span{
-    color: red;
+    color: antiquewhite;
 }
 
 .wrapper{
@@ -77,8 +88,16 @@
     grid-area: skills;
 }
 
+.skills div{
+    margin-top: 2%;
+}
+
 .aboutMe{
     grid-area: aboutMe;
+}
+
+.aboutMe div{
+    margin-top: 2%;
 }
 
 .contacts{
