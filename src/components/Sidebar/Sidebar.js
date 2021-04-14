@@ -170,7 +170,6 @@ const Sidebar = (props) => {
         )
     });
 
-
     //
     return (
 

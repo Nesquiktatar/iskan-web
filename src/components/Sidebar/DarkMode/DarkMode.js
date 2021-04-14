@@ -1,7 +1,7 @@
 import React from 'react';
 import * as s from './DarkMode.styles';
-import moon from '../../../assets/icons/moon.svg'
-import sun from '../../../assets/icons/sun.svg'
+import moon from '../../../assets/icons/darkMode/moon.svg'
+import sun from '../../../assets/icons/darkMode/sun.svg'
 
 const DarkMode = (props) => {
 

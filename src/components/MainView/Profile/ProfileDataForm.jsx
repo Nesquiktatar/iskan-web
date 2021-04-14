@@ -2,6 +2,7 @@ import React from 'react';
 import {buildField, Input, Textarea} from '../../common/FormsControls/FormsControls';
 import {reduxForm} from 'redux-form';
 import s from './Profile.module.css';
+import * as st from './Profile.styles'
 
 const ProfileDataForm = ({handleSubmit, profile, error}) => {
     return (
@@ -15,7 +16,7 @@ const ProfileDataForm = ({handleSubmit, profile, error}) => {
                 {error}
             </div>}
             <label htmlFor="save">
-                <div className={s.wrapper}>
+                <div className={s.wrapperForm}>
                     <div className={s.fullName}>
                         {buildField('Full name', 'fullName', [], Input)}
                     </div>
@@ -33,7 +34,7 @@ const ProfileDataForm = ({handleSubmit, profile, error}) => {
                         <b>About me</b>:
                         {buildField('About me', 'aboutMe', [], Textarea)}
                     </div>
-                    <div className={s.contacts}>
+                    <div className={s.contactsForm}>
                         {Object.keys(profile.contacts).map(key => {
                             return (
                                 <div className={s.contactsInside2} key={key}>

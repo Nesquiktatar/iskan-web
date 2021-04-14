@@ -16,7 +16,8 @@ const LoginForm = ({handleSubmit, error, captchaUrl, themes}) => {
                 <s.Password>Password: {buildField('Password', 'password', [required], Input, {type: 'password'})}</s.Password>
                 <s.RememberMe>{buildField(null, 'rememberMe', [], Input, {type: 'checkbox'}, 'remember me')}</s.RememberMe>
 
-                {captchaUrl && <img src={captchaUrl} alt="captcha"/>}
+                
+                    captchaUrl && <img src={captchaUrl} alt="captcha"/>}
                 {captchaUrl && buildField('Enter symbols from image', 'captcha', [required], Input)}
                 {error && <s.FormSummaryError>
                     {error}
