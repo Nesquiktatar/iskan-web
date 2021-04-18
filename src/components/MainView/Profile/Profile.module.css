@@ -4,8 +4,8 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
-            'photo description'
-            'status description';
+            'status description'
+            'photo   description';
 }
 
 @media(max-width: 900px){
@@ -39,7 +39,7 @@
     text-align: center;
     padding: 2% 4%;
     grid-area: status;
-    color: rgba(91, 192, 190);
+    color: rgba(91, 192, 190, 1);
 }
 
 .imgDownload,
@@ -63,7 +63,7 @@
     padding: 1% 1%;
     display: grid;
     grid-template-columns: 2fr 2fr;
-    grid-template-rows: 1fr 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 4fr;
     grid-template-areas:
         'fullName  fullName'
         'lookingForJob  aboutMe'
@@ -134,15 +134,12 @@
 
 .contactsInside :hover{
     background-color: antiquewhite;
-    overflow: hidden;
+/*    overflow: hidden;*/
 }
 
 .contacts a{
     color: antiquewhite;
     text-decoration: none;
-}
-
-.contactsInside{
 }
 
 .facebook{
