@@ -92,8 +92,6 @@ const Contact = ({contactTitle, contactValue}) => {
     return (
         <div className={s.contactsInside}>
             <a href={contactValue}><img src={iconPath} alt={contactTitle}/></a>
-
-
         </div>
     )
 }

@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const Profile = styled.div`
     background-color: ${p => p.themes.dark};
+    background-size: 100%;
     display: grid;
     grid-template-columns:10% 80% 10%;
     

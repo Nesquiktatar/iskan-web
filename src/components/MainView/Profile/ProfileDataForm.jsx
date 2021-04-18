@@ -24,16 +24,17 @@ const ProfileDataForm = ({handleSubmit, profile, error}) => {
                         <b>Looking for a job</b>:
                             {buildField('', 'lookingForAJob', [], Input, {type: 'checkbox'})}
                     </div>
+                    <div className={s.aboutMe}>
+                        <b>About me</b>:
+                        {buildField('About me', 'aboutMe', [], Textarea)}
+                    </div>
                     <div className={s.skills}>
                         <b>My professional skills</b>:
                         <div>
                             {buildField('My professional skills', 'lookingForAJobDescription', [], Textarea)}
                         </div>
                     </div>
-                    <div className={s.aboutMe}>
-                        <b>About me</b>:
-                        {buildField('About me', 'aboutMe', [], Textarea)}
-                    </div>
+
                     <div className={s.contactsForm}>
                         {Object.keys(profile.contacts).map(key => {
                             return (
