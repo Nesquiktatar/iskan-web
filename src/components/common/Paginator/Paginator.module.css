@@ -1,8 +1,20 @@
 .selectedPage{
     font-weight: bold;
-    color: #A3F7BF;
+    color: red;
     font-size: x-large;
 }
+.dark{
+    font-weight: bold;
+    color: rgba(254,191,16, 0.8);
+    font-size: x-large;
+}
+
+.bright{
+    font-weight: bold;
+    color: rgba(127, 83, 172);
+    font-size: x-large;
+}
+
 .paginator {
     font-family:'Verdana';
 }
@@ -16,7 +28,7 @@
 }
 
 .pageNumber:hover {
-    color:#A3F7BF;
+    color: #29A19C;
 }
 
 .pageNumber.selectedPage{

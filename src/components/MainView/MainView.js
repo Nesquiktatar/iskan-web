@@ -5,7 +5,7 @@ import Routes from '../../Routes'
 const MainView = (props) => {
     return(
         <s.MainViewContainer>
-            <Routes />
+            <Routes theme={props.theme}/>
         </s.MainViewContainer>
     )
 }

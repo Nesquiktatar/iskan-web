@@ -5,9 +5,9 @@ import {withSuspense} from './hoc/withSuspense';
 //Components
 import DialogsContainer from './components/MainView/Dialogs/DialogsContainer';
 import ProfileContainer from './components/MainView/Profile/ProfileContainer';
+import UsersContainer from "./components/MainView/Users/UsersContainer";
 
 const LoginContainer = React.lazy(() => import('./components/MainView/Login/LoginContainer'));
-const UsersContainer = React.lazy(() => import('./components/MainView/Users/UsersContainer'));
 
 const Routes = (props) => {
 
@@ -16,7 +16,7 @@ const Routes = (props) => {
             <Route  path='/profile/:userId?' render={() => <ProfileContainer />}/>
             <Route  exact path='/' render={() => <Redirect to={'profile'}/>}/>
             <Route path='/dialogs' render={() => <DialogsContainer/>}/>
-            <Route path='/users' render={withSuspense(UsersContainer)}/>
+            <Route path='/users' render={() => <UsersContainer theme={props.theme}/>}/>
             <Route path='/login' render={withSuspense(LoginContainer)}/>
             <Route path='*' render={() => <div>404 NOT FOUND</div>}/>
             {/*<Route exact path='/destinations' component={Destinations}/>

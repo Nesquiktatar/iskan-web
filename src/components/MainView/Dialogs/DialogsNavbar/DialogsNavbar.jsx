@@ -12,7 +12,7 @@ const DialogsNavbar = ({data, themes}) => {
     let DialogsNavElDataElements = data.map(d => <DialogsNavEl themes={themes} selected={selected} changeDialog={changeDialog} name={d.name} id={d.id}/>)
 
     return (
-        <s.DialogsNavbar themes={themes}>
+        <s.DialogsNavbar >
             {DialogsNavElDataElements}
         </s.DialogsNavbar>
     )

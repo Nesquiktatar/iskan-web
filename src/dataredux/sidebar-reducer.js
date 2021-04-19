@@ -28,15 +28,15 @@ let initialState = {
     },
     menuItems: [
         {name: 'Profile', to: '/profile', icon: 'icons/sidebar/home.svg', subMenuItems: []},
-        {name: 'Dialogs', to: '/dialogs', icon: 'icons/sidebar/about.svg', subMenuItems: []},
+        {name: 'Dialogs', to: '/dialogs', icon: 'icons/sidebar/dialogs.svg', subMenuItems: []},
         /*{
             name: 'Helper', to: '/helper', icon: 'icons/destinations.svg',
             subMenuItems: [
                 {name: 'Todolist', to: '/todolist'},
             ]
         },*/
-        {name: 'Users', to: '/users', icon: 'icons/sidebar/blog.svg', subMenuItems: []},
-        {name: 'FAQ', to: '/faq', icon: 'icons/sidebar/services.svg', subMenuItems: []},
+        {name: 'Users', to: '/users', icon: 'icons/sidebar/users.svg', subMenuItems: []},
+        {name: 'FAQ', to: '/faq', icon: 'icons/sidebar/faq.svg', subMenuItems: []},
     ],
 
     fonts: {

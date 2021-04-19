@@ -10,12 +10,10 @@ export const Dialogs = styled.div`
 `;
 
 export const DialogsNavEl = styled.div`
-   background-color: ${p => p.themes.dark.grey};
-
      margin: 2%;
      border-radius: 34px;
     a{
-       color: ${p => p.themes.dark.turquoise}; 
+       color: ${p => p.theme.textColor1}; 
        font-size: larger;  
     text-decoration: none;
     }
@@ -24,10 +22,10 @@ export const DialogsNavEl = styled.div`
         width: 20%;
     }
     &:hover{
-        background-color: ${p => p.themes.dark.green};
+        background-color: ${p => p.theme.textColor2};
         transition: .1s ease-in all
     }
-    background-color: ${p => p.selected === p.id ? `${p.themes.dark.green}` : ``};
+    background-color: ${p => p.selected === p.id ? `${p.theme.textColor2}` : ``};
    `;
 
 export const DialogsNavbar = styled.div`

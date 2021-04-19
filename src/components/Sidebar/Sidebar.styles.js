@@ -77,8 +77,8 @@ export const Text = styled.p`
 
 export const Icon = styled.img`
     ${p => p.isSidebarOpen && 'padding-right: 20px'};
-    height: 16px;
-    width: 16px;
+    height: 20px;
+    width: 20px;
 `
 
 //Dropdown icon --------------------------------------------------------------------------------------------------------
@@ -141,17 +141,17 @@ export const DarkLight = styled.div`
     width: 30%;
     bottom: 20%;
     left: 30%;
-    margin: 10% auto;
+    margin: ${p => p.isSidebarOpen ? '30% auto' : '30% 0 0 18%'};
     
 `;
 
 export const LoginBlock = styled.div`
     color: ${p => p.theme.fontColor};
-    margin: 4% 0 14% 34%;
+    margin: ${p => p.isSidebarOpen ? '4% 0 14% 34%' : '0 0 24% 10%'} ;
     button{
     color: ${p => p.theme.btnColor};
-    margin-left: 40%;
-    font-size: larger;
+    margin-left: ${p => p.isSidebarOpen ? '40%' : '35%'};
+    font-size: ${p => p.isSidebarOpen ? '12 pt' : '10 pt'};
     }
     a{
     color: ${p => p.theme.fontColor};

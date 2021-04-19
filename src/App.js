@@ -73,7 +73,7 @@ const App = (props) => {
                     theme={theme}
                     setTheme={setTheme}
                 />
-                <MainView />
+                <MainView theme={theme}/>
             </s.App>
         </ThemeProvider>
 

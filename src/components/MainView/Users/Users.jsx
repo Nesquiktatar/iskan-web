@@ -9,7 +9,8 @@ import Button from "../../common/Button/Button";
 
 const Users = React.memo(({
                               currentPage, onPageChanged, totalUsersCount, pageSize, usersData, followingInProgress,
-                              unFollowThunk, followThunk, getFriendsThunkCreator, getUsersThunkCreator, getSearchUserThunk, appPage, ...props
+                              unFollowThunk, followThunk, getFriendsThunkCreator, getUsersThunkCreator, getSearchUserThunk,
+                              appPage, theme, ...props
                           }) => {
 
     const onSubmit = (formData) => {
@@ -47,6 +48,8 @@ const Users = React.memo(({
                                getFriendsThunkCreator={getFriendsThunkCreator}
                                getUsersThunkCreator={getUsersThunkCreator}
                                isFriendsList={isFriendsList}
+                               themes={appPage.themes}
+                               theme={theme}
                     />
                 </s.Paginator>
                     <UserSearchFrom onSubmit={onSubmit}/>

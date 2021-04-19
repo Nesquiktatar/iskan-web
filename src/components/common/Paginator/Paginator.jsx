@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import moduleStyle from './Paginator.module.css';
 import cn from 'classnames';
 
-const Paginator = ({totalItemsCount, pageSize, onPageChanged, currentPage, portionSize = 10, getUsersThunkCreator, getFriendsThunkCreator, isFriendsList }) => {
+const Paginator = ({totalItemsCount, pageSize, onPageChanged, currentPage, portionSize = 10, getUsersThunkCreator,
+                       getFriendsThunkCreator, isFriendsList, themes, theme }) => {
 
 
 
@@ -18,15 +19,22 @@ const Paginator = ({totalItemsCount, pageSize, onPageChanged, currentPage, porti
     let leftPortionPageNumber = (portionNumber-1)*pageSize +1;
     let rightPortionPageNumber = portionNumber * portionSize;
 
+    let classNameMode = '';
+    if(theme === 'bright')
+        classNameMode = moduleStyle.bright
+    else if(theme === 'dark')
+        classNameMode = moduleStyle.dark
+
     return (
         <div className={moduleStyle.paginator} >
             {portionNumber > 1 &&
             <button onClick={() => {setPortionNumber(portionNumber-1)}}>PREV</button>}
+
             {pages
                 .filter(p => p>=leftPortionPageNumber && p <= rightPortionPageNumber)
                 .map(p => {
                 return <span className={ cn({
-                    [moduleStyle.selectedPage] : currentPage === p
+                    [classNameMode] : currentPage === p
                 },moduleStyle.pageNumber)}
                              key={p}
                              onClick={(e) =>

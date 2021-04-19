@@ -180,8 +180,8 @@ const Sidebar = (props) => {
             isSidebarOpen={isSidebarOpen}
 
         >
-            <s.SidebarHeader font={props.sidebarPage.fonts.header}>{header}</s.SidebarHeader>
-            <s.LoginBlock>
+            <s.SidebarHeader font={props.sidebarPage.fonts.header}>{header}</s.SidebarHeader >
+            <s.LoginBlock isSidebarOpen={isSidebarOpen}>
                 {props.isAuth
                     ? <div> {props.login} <div> <button onClick={props.logout}>Log out</button></div></div>
                     : <NavLink to={'/login'}>Login</NavLink>
@@ -189,7 +189,7 @@ const Sidebar = (props) => {
             </s.LoginBlock>
 
             <s.MenuItemContainer>{menuItemsJSX}</s.MenuItemContainer>
-            <s.DarkLight>
+            <s.DarkLight isSidebarOpen={isSidebarOpen}>
                 <DarkMode theme={props.theme}
                           setTheme={props.setTheme}/>
             </s.DarkLight>
