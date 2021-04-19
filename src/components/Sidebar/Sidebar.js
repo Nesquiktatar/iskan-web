@@ -181,7 +181,7 @@ const Sidebar = (props) => {
 
         >
             <s.SidebarHeader font={props.sidebarPage.fonts.header}>{header}</s.SidebarHeader>
-            <s.LoginBlock themes={props.themes}>
+            <s.LoginBlock>
                 {props.isAuth
                     ? <div> {props.login} <div> <button onClick={props.logout}>Log out</button></div></div>
                     : <NavLink to={'/login'}>Login</NavLink>

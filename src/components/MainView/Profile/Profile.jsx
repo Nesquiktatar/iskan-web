@@ -6,7 +6,7 @@ import ProfileInfo from './ProfileInfo';
 const Profile = React.memo(({profile, status, updateStatusThunk, isOwner, savePhoto, saveProfile, themes}) => {
 
     return (
-        <s.Profile themes={themes}>
+        <s.Profile >
             <s.ProfileInfo>
                 <ProfileInfo isOwner={isOwner}
                              profile={profile}

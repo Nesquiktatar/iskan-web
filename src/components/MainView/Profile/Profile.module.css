@@ -1,5 +1,4 @@
 .container {
-    color: rgba(44, 31, 23, 0.8);
     padding-top: 2%;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -36,10 +35,8 @@
 
 
 .status{
-    text-align: center;
-    padding: 2% 4%;
     grid-area: status;
-    color: rgba(91, 192, 190, 1);
+    margin: 2% 10%;
 }
 
 .imgDownload,
@@ -52,14 +49,6 @@
 
 .description{
     grid-area: description;
-}
-
-.description span{
-    color: antiquewhite;
-}
-
-.wrapperForm{
-
 }
 
 .wrapper{
@@ -138,11 +127,6 @@
 
 .contacts img{
      max-width: 50px;
-}
-
-.contactsInside a :hover{
-    background-color: antiquewhite;
-/*    overflow: hidden;*/
 }
 
 .facebook{

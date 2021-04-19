@@ -6,7 +6,7 @@ export const SidebarContainer = styled.div`
     min-width: 80px;
     background-image: linear-gradient(
     315deg,
-     ${props => props.theme.bgColor1} 0%,
+     ${p => p.theme.bgColor1} 0%,
         ${p => p.theme.bgColor2} 74%),
         url(${p => p.backgroundImage});
                 
@@ -146,14 +146,15 @@ export const DarkLight = styled.div`
 `;
 
 export const LoginBlock = styled.div`
-    color: ${p => p.themes.dark.green};
+    color: ${p => p.theme.fontColor};
     margin: 4% 0 14% 34%;
     button{
+    color: ${p => p.theme.btnColor};
     margin-left: 40%;
     font-size: larger;
     }
     a{
-    color: ${p => p.themes.dark.green};
+    color: ${p => p.theme.fontColor};
     text-decoration: none;
     }
 `;

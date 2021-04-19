@@ -16,14 +16,14 @@ class AppContainer extends React.Component {
     render() {
         return (
             <>
-                <App appPage={this.props.appPage}/>
+                <App {...this.props}/>
             </>
         )
     }
 }
 
 const mapStateToProps = (state) => ({
-    appPage: state.appPage,
+    themes: state.appPage.themes,
     initialized: state.appPage.initialized
 })
 

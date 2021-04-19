@@ -44,7 +44,7 @@ const ProfileInfo = ({
             <div className={sm.imgDownload}>
                 {isOwner && <input id='imgDownload' type="file" onChange={onMainPhotoSelected} src={userPhoto}/>}
             </div>
-            <s.Description themes={themes}>
+            <s.Description>
                 <div className={sm.description}>
                     {editMode
                         ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>

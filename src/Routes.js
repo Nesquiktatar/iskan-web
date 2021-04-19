@@ -13,7 +13,7 @@ const Routes = (props) => {
 
     return (
         <Switch>
-            <Route  path='/profile/:userId?' render={() => <ProfileContainer/>}/>
+            <Route  path='/profile/:userId?' render={() => <ProfileContainer />}/>
             <Route  exact path='/' render={() => <Redirect to={'profile'}/>}/>
             <Route path='/dialogs' render={() => <DialogsContainer/>}/>
             <Route path='/users' render={withSuspense(UsersContainer)}/>

@@ -7,16 +7,24 @@ let initialState = {
     themes: {
 
         bright: {
-            bgColor1: `rgba(100, 125, 238, 0.8)`,
-            bgColor2: `rgba(127, 83, 172, 0.8)`,
-            fontColor: `rgba(19, 15, 64)`,
-            fontColorSelected: `rgba(255, 255, 255)`,
+            btnColor: 'rgba(0, 0, 0, 0.8)',
+            textColor1:'#29A19C',
+            textColor2:'rgba(127, 83, 172)',
+            backgroundColor1: '#cff6cf',
+            backgroundColor2: '#cfe5cf',
+            bgColor1: `rgba(207, 246, 207, 0.8)`,
+            bgColor2: `rgba(207, 229, 207, 0.8)`,
+            fontColor: `rgba(127, 83, 172)`,
+            fontColorSelected: `rgba(41, 161, 156)`,
             dividerColor: `rgba(169, 139, 199)`,
             selectedBackgroundCollapsedMode: `dark`
         },
         dark: {
-            black: '#27323A',
-            grey: '#435055',
+            btnColor: 'rgba(254,191,16, 0.8)',
+            textColor1:'#f6def6',
+            textColor2:`rgba(254,191,16, 0.6)`,
+            backgroundColor1: '#27323A',
+            backgroundColor2: '#435055',
             turquoise: '#29A19C',
             green: '#A3F7BF',
             bgColor1: 'rgba(67, 67, 67, 0.8)',

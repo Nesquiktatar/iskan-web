@@ -61,14 +61,14 @@ const App = (props) => {
         */
 
     const [theme, setTheme] = useState('bright');
-    if(!props.appPage.initialized){
+    if(!props.initialized){
         return <Preloader/>
     }
     return (
 
 
-        <ThemeProvider theme={props.appPage.themes[theme]}>
-            <s.App appPage={props.appPage}>
+        <ThemeProvider theme={props.themes[theme]}>
+            <s.App>
                 <SidebarContainer
                     theme={theme}
                     setTheme={setTheme}
