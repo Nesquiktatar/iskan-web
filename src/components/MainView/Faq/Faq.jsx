@@ -1,7 +1,9 @@
 import React from 'react';
 import s from './FaqContent/FaqContent.module.css';
 import FaqContent from "./FaqContent/FaqContent";
-import img from '../../../assets/images/mount.jpg'
+import FaqContentWithImg from "./FaqContent/FaqContentWithImg";
+import sun from '../../../assets/icons/darkMode/sun.svg'
+import moon from '../../../assets/icons/darkMode/moon.svg'
 
 const Faq = () => {
     return (
@@ -16,9 +18,14 @@ const Faq = () => {
                                 до 10км=200р
                                 до 20км=300р'
             />
-            <FaqContent
-                question='Сколько стоит доставка?'
-                answer={img}
+            <FaqContentWithImg
+                question='Change the theme?'
+                answer1='For change theme u should click on sun '
+                imgSrc1={sun}
+                answer2=' or moon '
+                imgSrc2={moon}
+                answer3=' icon on sidebar'
+                imgAlt='icon'
             />
         </div>
     )

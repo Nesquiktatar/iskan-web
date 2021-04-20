@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import s from './FaqContent.module.css'
+import s from './FaqContent.module.css';
 
 class FaqContent extends Component {
     constructor(props) {
