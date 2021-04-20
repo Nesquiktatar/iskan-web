@@ -52,7 +52,7 @@ const Users = React.memo(({
                                theme={theme}
                     />
                 </s.Paginator>
-                    <UserSearchFrom onSubmit={onSubmit}/>
+                    <UserSearchForm onSubmit={onSubmit}/>
             </s.Navbar>
             <s.UsersList>
                 {
@@ -78,6 +78,6 @@ const SearchForm = ({handleSubmit}) => {
     )
 }
 
-const UserSearchFrom = reduxForm({form: 'term'})(SearchForm)
+const UserSearchForm = reduxForm({form: 'term'})(SearchForm)
 
 export default Users;

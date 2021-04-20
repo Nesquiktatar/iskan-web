@@ -23,6 +23,7 @@ export const Post = styled.div`
    
    span {
    float: right;
+   margin-top: -2%;
    }
 `;
 

@@ -8,6 +8,7 @@ import ProfileContainer from './components/MainView/Profile/ProfileContainer';
 import UsersContainer from "./components/MainView/Users/UsersContainer";
 
 const LoginContainer = React.lazy(() => import('./components/MainView/Login/LoginContainer'));
+const Faq = React.lazy(() => import('./components/MainView/Faq/Faq'));
 
 const Routes = (props) => {
 
@@ -18,6 +19,7 @@ const Routes = (props) => {
             <Route path='/dialogs' render={() => <DialogsContainer/>}/>
             <Route path='/users' render={() => <UsersContainer theme={props.theme}/>}/>
             <Route path='/login' render={withSuspense(LoginContainer)}/>
+            <Route path='/faq' render={withSuspense(Faq)}/>
             <Route path='*' render={() => <div>404 NOT FOUND</div>}/>
             {/*<Route exact path='/destinations' component={Destinations}/>
             <Route exact path='/destinations/:country' component={Country}/>

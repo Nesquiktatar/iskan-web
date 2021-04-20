@@ -1,0 +1,19 @@
+.FaqContentWrapper {
+    background-color: blue;
+}
+
+.question{
+    color: #13d748;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.answer {
+    color: #8c0ecf;
+    text-align: center;
+
+}
+
+.faqWrapper{
+
+}

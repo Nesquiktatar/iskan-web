@@ -7,22 +7,13 @@
             'status description';
 }
 
-@media(max-width: 900px){
-    .container{
-        display:flex;
-        flex-direction: column;
-    }
-    .photo img{
-        margin-left: 24%;
-    }
+
+.contacts{
+    grid-area: contacts;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
 }
 
-@media(max-width: 800px){
-    .wrapper{
-        display: flex;
-        flex-direction: column;
-    }
-}
 
 
 .photo img{
@@ -112,12 +103,6 @@
     margin-top: 2%;
 }
 
-.contacts{
-    grid-area: contacts;
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
-}
-
 .contactsForm{
     grid-area: contacts;
     display: grid;
@@ -129,15 +114,47 @@
      max-width: 50px;
 }
 
-.facebook{
-}
-
-.contactsInside2 {
-    display: flex;
-    justify-content: flex-end;
-}
 .contactsInside2 b{
     transform: translateY(30%);
 
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px){
+    .container{
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 12%;
+    }
+    .photo img{
+        margin-left: 10%;
+    }
+    .status{
+        text-align: center;
+    }
+    .contacts{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .wrapper{
+        grid-template-rows: 2fr 1fr 2fr 2fr 4fr;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 28%;
+    }
+    .status{
+        text-align: center;
+    }
+    .contacts{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .wrapper{
+        grid-template-rows: 2fr 1fr 2fr 2fr 6fr;
+    }
 }
 

@@ -1,12 +1,16 @@
 import styled from "@emotion/styled";
 
 export const Dialogs = styled.div`
-      padding: 2% 0 0 10%;
+    padding: 2% 0 0 10%;
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-areas: 
         'DialogsNavbar DialogsElements'
-        'DialogsNavbar  MessageInputReduxForm'
+        'DialogsNavbar  MessageInputReduxForm';
+    @media screen and (max-width: 800px){
+    display: flex;
+    flex-direction: column;
+    }        
 `;
 
 export const DialogsNavEl = styled.div`
@@ -34,7 +38,12 @@ export const DialogsNavbar = styled.div`
     img{
         padding: 5% 0 0 30%;
     }
-    
+    @media screen and (max-width: 800px){
+    display: flex;
+    img {
+      padding-left: 5%;
+    }
+    }
 `;
 
 
@@ -45,12 +54,16 @@ export const DialogsElements = styled.div`
 
 
 export const MessageInputReduxForm = styled.div`
-   display: flex;
+      display: flex;
    padding:2% 0 0 20%;
    grid-area: MessageInputReduxForm;
    button{
    left: 20%;
    }
+   @media screen and (max-width: 800px){
+   padding:2% 0 0 0;
+   }
+   
 
 `;
 
